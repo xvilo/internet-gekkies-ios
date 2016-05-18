@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dhf-Kf-HLU">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Internet Gekkies-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="SoundListViewController" customModule="Internet_Gekkies" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Qjl-XV-WtQ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="zB4-rB-GWP" customClass="GADBannerView">
+                                    <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Qjl-XV-WtQ" secondAttribute="bottom" id="45K-sk-FNk"/>
+                            <constraint firstItem="Qjl-XV-WtQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Fam-YW-Rtd"/>
+                            <constraint firstAttribute="trailing" secondItem="Qjl-XV-WtQ" secondAttribute="trailing" id="JRl-7q-mHd"/>
+                            <constraint firstItem="Qjl-XV-WtQ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="LE6-nw-lKZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Internet Gekkies" id="oA6-uz-LzO">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="VgY-7v-ndO">
+                            <connections>
+                                <segue destination="2zE-ag-PnE" kind="presentation" id="m9x-uu-CPV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addButtonOut" destination="VgY-7v-ndO" id="pyk-Wj-rtH"/>
+                        <outlet property="bannerView" destination="zB4-rB-GWP" id="SHz-Ng-NlY"/>
+                        <outlet property="tableView" destination="Qjl-XV-WtQ" id="HdS-Dg-aXG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="33f-Xa-maF">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="565" y="475"/>
+        </scene>
+        <!--Add Sound View Controller-->
+        <scene sceneID="7H2-O0-44Z">
+            <objects>
+                <viewController id="2zE-ag-PnE" customClass="AddSoundViewController" customModule="Internet_Gekkies" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Q5C-cp-yPt"/>
+                        <viewControllerLayoutGuide type="bottom" id="71h-Nq-y0n"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Kh4-qw-JIL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pPL-el-6Ns">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="isX-6S-HcP"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Voeg Toe" id="Ljo-r1-7A8">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="b0F-4d-30b">
+                                            <connections>
+                                                <action selector="cancelButton:" destination="2zE-ag-PnE" id="ZYp-HH-654"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="save" id="ixI-bf-pgB">
+                                            <connections>
+                                                <action selector="saveButton:" destination="2zE-ag-PnE" id="ppZ-bR-eUg"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Vul naam hier in" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xPC-vy-y8d">
+                                <rect key="frame" x="20" y="104" width="560" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="jGS-vG-DmA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7go-Gj-fTy">
+                                <rect key="frame" x="264" y="169" width="73" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="pfc-Qg-6eg"/>
+                                </constraints>
+                                <state key="normal" title="OPNEMEN"/>
+                                <connections>
+                                    <action selector="recordButton:" destination="2zE-ag-PnE" eventType="touchUpInside" id="cgK-fO-7u7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xPC-vy-y8d" firstAttribute="leading" secondItem="Kh4-qw-JIL" secondAttribute="leading" constant="20" id="1Wj-hz-iNA"/>
+                            <constraint firstAttribute="trailing" secondItem="xPC-vy-y8d" secondAttribute="trailing" constant="20" id="FBj-Nf-K0w"/>
+                            <constraint firstItem="7go-Gj-fTy" firstAttribute="top" secondItem="xPC-vy-y8d" secondAttribute="bottom" constant="30" id="IPp-SB-MVO"/>
+                            <constraint firstItem="xPC-vy-y8d" firstAttribute="top" secondItem="pPL-el-6Ns" secondAttribute="bottom" constant="40" id="JHu-U3-awR"/>
+                            <constraint firstItem="pPL-el-6Ns" firstAttribute="leading" secondItem="Kh4-qw-JIL" secondAttribute="leading" id="f51-ZY-nLN"/>
+                            <constraint firstAttribute="trailing" secondItem="pPL-el-6Ns" secondAttribute="trailing" id="jRk-3Z-gVn"/>
+                            <constraint firstItem="7go-Gj-fTy" firstAttribute="leading" secondItem="Kh4-qw-JIL" secondAttribute="leadingMargin" constant="20" id="sTG-JR-mw2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7go-Gj-fTy" secondAttribute="trailing" constant="20" id="tJ1-EF-WQ6"/>
+                            <constraint firstItem="pPL-el-6Ns" firstAttribute="top" secondItem="Q5C-cp-yPt" secondAttribute="bottom" id="zs1-Gt-1u5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="recordButtonOutlet" destination="7go-Gj-fTy" id="miB-Nl-RuK"/>
+                        <outlet property="soundNameInput" destination="xPC-vy-y8d" id="4Xq-gP-6c1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vU9-lU-Vbt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1248" y="475"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vXP-0B-Flp">
+            <objects>
+                <navigationController id="dhf-Kf-HLU" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="43S-VJ-DZH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="eWR-XH-lh4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RGi-dJ-Fp1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-222" y="475"/>
+        </scene>
+    </scenes>
+</document>
