@@ -6,4 +6,5 @@ target "Internet Gekkies" do
 	pod 'Firebase/Core'
 	pod 'Firebase/AdMob'
 	pod 'Firebase/Crash'
+	pod 'Firebase/Messaging'
 end
