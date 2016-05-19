@@ -18,19 +18,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Laden..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YTI-Xk-jNh">
-                                <rect key="frame" x="20" y="507" width="560" height="43"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Laden..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YTI-Xk-jNh">
+                                <rect key="frame" x="20" y="524" width="560" height="26"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="D2X-Mz-xf9">
+                                <rect key="frame" x="290" y="484" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Internet Gekkies" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GGT-Qg-VRD">
+                                <rect key="frame" x="178" y="279" width="244" height="42"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="35"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="YTI-Xk-jNh" secondAttribute="bottom" constant="50" id="KCE-m1-4A2"/>
+                            <constraint firstItem="GGT-Qg-VRD" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="KWM-sJ-fNN"/>
+                            <constraint firstItem="YTI-Xk-jNh" firstAttribute="top" secondItem="D2X-Mz-xf9" secondAttribute="bottom" constant="20" id="Oxj-r5-5L9"/>
                             <constraint firstItem="YTI-Xk-jNh" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailingMargin" id="eNf-iB-3ki"/>
+                            <constraint firstItem="D2X-Mz-xf9" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ijC-iH-9Cg"/>
                             <constraint firstItem="YTI-Xk-jNh" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="75" id="lOj-zc-m6z"/>
                             <constraint firstItem="YTI-Xk-jNh" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="lRz-3c-EXw"/>
+                            <constraint firstItem="GGT-Qg-VRD" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="vvP-Lt-Ibz"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">

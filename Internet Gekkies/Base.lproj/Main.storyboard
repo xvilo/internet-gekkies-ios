@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Internet Gekkies-->
@@ -49,7 +48,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Internet Gekkies" id="oA6-uz-LzO">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="VgY-7v-ndO">
+                        <barButtonItem key="rightBarButtonItem" title="Over" style="plain" id="VgY-7v-ndO">
                             <connections>
                                 <segue destination="2zE-ag-PnE" kind="presentation" id="m9x-uu-CPV"/>
                             </connections>
@@ -88,55 +87,82 @@
                                     <constraint firstAttribute="height" constant="44" id="isX-6S-HcP"/>
                                 </constraints>
                                 <items>
-                                    <navigationItem title="Voeg Toe" id="Ljo-r1-7A8">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="b0F-4d-30b">
+                                    <navigationItem title="Over" id="Ljo-r1-7A8">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="b0F-4d-30b">
                                             <connections>
                                                 <action selector="cancelButton:" destination="2zE-ag-PnE" id="ZYp-HH-654"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="save" id="ixI-bf-pgB">
-                                            <connections>
-                                                <action selector="saveButton:" destination="2zE-ag-PnE" id="ppZ-bR-eUg"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Vul naam hier in" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xPC-vy-y8d">
-                                <rect key="frame" x="20" y="104" width="560" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gekkies.png" translatesAutoresizingMaskIntoConstraints="NO" id="gwn-6x-5qm">
+                                <rect key="frame" x="240" y="114" width="120" height="120"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="jGS-vG-DmA"/>
+                                    <constraint firstAttribute="height" constant="120" id="Zpo-Sj-SbL"/>
+                                    <constraint firstAttribute="width" constant="120" id="bFA-QU-wL3"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7go-Gj-fTy">
-                                <rect key="frame" x="264" y="169" width="73" height="30"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Internet Gekkies" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZiW-yX-0uv">
+                                <rect key="frame" x="178" y="259" width="244" height="42"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="35"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gx6-3F-1z2">
+                                <rect key="frame" x="25" y="326" width="550" height="224"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Deze app is gemaakt door Sem Schilder. Hij zou moeten werken op iPhones en iPads. Crash reports worden automatisch door gestuurd. Heb je ideeën, opmerkingen of wil je gewoon wat kwijt? Stuur dan een e-mail naar sem@thisisd3.com. Deze app is gemaakt om Swift te leren. </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SBT-vX-s6B" customClass="GADBannerView">
+                                <rect key="frame" x="0.0" y="550" width="600" height="50"/>
+                                <color key="backgroundColor" red="0.9129983174596481" green="0.93273478403141363" blue="0.91272297050788964" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="pfc-Qg-6eg"/>
+                                    <constraint firstAttribute="height" constant="50" id="6xK-bl-rYg"/>
+                                    <constraint firstAttribute="height" constant="50" id="kgN-cg-8mq"/>
                                 </constraints>
-                                <state key="normal" title="OPNEMEN"/>
-                                <connections>
-                                    <action selector="recordButton:" destination="2zE-ag-PnE" eventType="touchUpInside" id="cgK-fO-7u7"/>
-                                </connections>
-                            </button>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="6xK-bl-rYg"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="xPC-vy-y8d" firstAttribute="leading" secondItem="Kh4-qw-JIL" secondAttribute="leading" constant="20" id="1Wj-hz-iNA"/>
-                            <constraint firstAttribute="trailing" secondItem="xPC-vy-y8d" secondAttribute="trailing" constant="20" id="FBj-Nf-K0w"/>
-                            <constraint firstItem="7go-Gj-fTy" firstAttribute="top" secondItem="xPC-vy-y8d" secondAttribute="bottom" constant="30" id="IPp-SB-MVO"/>
-                            <constraint firstItem="xPC-vy-y8d" firstAttribute="top" secondItem="pPL-el-6Ns" secondAttribute="bottom" constant="40" id="JHu-U3-awR"/>
+                            <constraint firstAttribute="trailing" secondItem="SBT-vX-s6B" secondAttribute="trailing" id="F6e-FP-sBA"/>
+                            <constraint firstItem="SBT-vX-s6B" firstAttribute="leading" secondItem="Kh4-qw-JIL" secondAttribute="leading" id="Nkf-oe-n0p"/>
+                            <constraint firstItem="SBT-vX-s6B" firstAttribute="top" secondItem="gx6-3F-1z2" secondAttribute="bottom" id="QRb-AG-KjT"/>
+                            <constraint firstItem="ZiW-yX-0uv" firstAttribute="top" secondItem="gwn-6x-5qm" secondAttribute="bottom" constant="25" id="RDn-nO-gHd"/>
+                            <constraint firstItem="gwn-6x-5qm" firstAttribute="top" secondItem="pPL-el-6Ns" secondAttribute="bottom" constant="50" id="V0s-sb-0kG"/>
+                            <constraint firstItem="SBT-vX-s6B" firstAttribute="leading" secondItem="Kh4-qw-JIL" secondAttribute="leading" id="V6u-LP-qtZ"/>
+                            <constraint firstItem="71h-Nq-y0n" firstAttribute="top" secondItem="SBT-vX-s6B" secondAttribute="bottom" id="eZN-zO-7vm"/>
                             <constraint firstItem="pPL-el-6Ns" firstAttribute="leading" secondItem="Kh4-qw-JIL" secondAttribute="leading" id="f51-ZY-nLN"/>
+                            <constraint firstAttribute="trailing" secondItem="gx6-3F-1z2" secondAttribute="trailing" constant="25" id="fqQ-H0-Ykm"/>
+                            <constraint firstItem="gwn-6x-5qm" firstAttribute="centerX" secondItem="Kh4-qw-JIL" secondAttribute="centerX" id="hvq-l5-f6H"/>
+                            <constraint firstItem="gx6-3F-1z2" firstAttribute="leading" secondItem="Kh4-qw-JIL" secondAttribute="leading" constant="25" id="j6Z-ay-3WE"/>
                             <constraint firstAttribute="trailing" secondItem="pPL-el-6Ns" secondAttribute="trailing" id="jRk-3Z-gVn"/>
-                            <constraint firstItem="7go-Gj-fTy" firstAttribute="leading" secondItem="Kh4-qw-JIL" secondAttribute="leadingMargin" constant="20" id="sTG-JR-mw2"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="7go-Gj-fTy" secondAttribute="trailing" constant="20" id="tJ1-EF-WQ6"/>
+                            <constraint firstAttribute="bottom" secondItem="SBT-vX-s6B" secondAttribute="bottom" id="swa-S0-oqz"/>
+                            <constraint firstItem="gx6-3F-1z2" firstAttribute="top" secondItem="ZiW-yX-0uv" secondAttribute="bottom" constant="25" id="vMb-Ce-AED"/>
+                            <constraint firstItem="SBT-vX-s6B" firstAttribute="centerX" secondItem="Kh4-qw-JIL" secondAttribute="centerX" id="wQg-rR-ND7"/>
+                            <constraint firstAttribute="trailing" secondItem="SBT-vX-s6B" secondAttribute="trailing" id="xgF-im-ynm"/>
                             <constraint firstItem="pPL-el-6Ns" firstAttribute="top" secondItem="Q5C-cp-yPt" secondAttribute="bottom" id="zs1-Gt-1u5"/>
+                            <constraint firstItem="ZiW-yX-0uv" firstAttribute="centerX" secondItem="Kh4-qw-JIL" secondAttribute="centerX" id="ztD-gY-kJv"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="F6e-FP-sBA"/>
+                                <exclude reference="V6u-LP-qtZ"/>
+                                <exclude reference="wQg-rR-ND7"/>
+                                <exclude reference="eZN-zO-7vm"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
-                        <outlet property="recordButtonOutlet" destination="7go-Gj-fTy" id="miB-Nl-RuK"/>
-                        <outlet property="soundNameInput" destination="xPC-vy-y8d" id="4Xq-gP-6c1"/>
+                        <outlet property="bannerAbout" destination="SBT-vX-s6B" id="2gC-gF-rdn"/>
+                        <outlet property="iconimage" destination="gwn-6x-5qm" id="PaA-rx-JLB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vU9-lU-Vbt" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -160,4 +186,7 @@
             <point key="canvasLocation" x="-222" y="475"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="gekkies.png" width="1024" height="1024"/>
+    </resources>
 </document>

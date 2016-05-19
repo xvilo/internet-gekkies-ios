@@ -7,61 +7,25 @@
 //
 
 import UIKit
-//import AVFoundation
+import GoogleMobileAds
 
 class AddSoundViewController: UIViewController{
     
-    
-    /* required init(coder aDecoder: NSCoder){
-        var baseString : String = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)[0] as String
-        var pathComponents = [baseString, "MyAudio.m4a"]
-        var audioURL = NSURL.fileURLWithPathComponents(pathComponents)
-        
-        var session = AVAudioSession.sharedInstance()
-        do{
-        try session.setCategory(AVAudioSessionCategoryPlayAndRecord, withOptions: )
-        }catch{
-            print("ooops");
-        }
-        
-        var recordSettings: [NSObject : AnyObject] = Dictionary()
-        recordSettings[AVFormatIDKey] = kAudioFormatMPEG4AAC
-        recordSettings[AVSampleRateKey] = 44100.0
-        recordSettings[AVNumberOfChannelsKey] = 2
-        
-        self.audioRecorder = AVAudioRecorder(URL: audioURL, settings: recordSettings, error: nil)
-        self.audioRecorder.meteringEnabled = true
-        self.audioRecorder.prepareToRecord()
-        
-        super.init(coder: aDecoder)!
-    }
- */
-    
-    @IBOutlet weak var soundNameInput: UITextField!
-    @IBOutlet weak var recordButtonOutlet: UIButton!
- //   var audioRecorder: AVAudioRecorder
-    
-    var soundListViewController = SoundListViewController()
+    @IBOutlet weak var iconimage: UIImageView!
+    @IBOutlet weak var bannerAbout: GADBannerView!
     
     @IBAction func cancelButton(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
-    @IBAction func saveButton(sender: AnyObject) {
-        let sound = Sound()
-        sound.name = self.soundNameInput.text!
-        
-        self.soundListViewController.sounds.append(sound)
-        
-        self.dismissViewControllerAnimated(true, completion: nil)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.iconimage.layer.cornerRadius = 25.0
+        self.iconimage.clipsToBounds = true
+        bannerAbout.adUnitID = "ca-app-pub-2406264984624429/9104060265"
+        //bannerAbout.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        print("Google Mobile Ads SDK version: " + GADRequest.sdkVersion())
+        bannerAbout.rootViewController = self
+        bannerAbout.loadRequest(GADRequest())
     }
-    
-    @IBAction func recordButton(sender: AnyObject) {
-        self.recordButtonOutlet.setTitle("Stop opnemen", forState: UIControlState.Normal)
-    }
-    
 }

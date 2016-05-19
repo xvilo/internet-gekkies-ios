@@ -57,7 +57,7 @@ class SoundListViewController: UIViewController, UITableViewDataSource, UITableV
         bannerView.rootViewController = self
         bannerView.loadRequest(GADRequest())
             
-        addButtonOut.enabled = false
+        //addButtonOut.enabled = false
         self.tableView.dataSource = self
         self.tableView.delegate = self
         
@@ -196,12 +196,6 @@ class SoundListViewController: UIViewController, UITableViewDataSource, UITableV
         self.audioPlayer.play()
         
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-    }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let addSoundViewController = segue.destinationViewController as! AddSoundViewController
-        addSoundViewController.soundListViewController = self
-        
     }
 }
 
