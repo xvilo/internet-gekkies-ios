@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		02CB640E697A37BE19C812C9 /* libPods-Internet Gekkies.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC1F755A37E7D64235AD3200 /* libPods-Internet Gekkies.a */; };
+		ECAFBF03D37BD8D7708F635E /* Pods_Internet_Gekkies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B416FF15EA4E0217A814F86 /* Pods_Internet_Gekkies.framework */; };
 		F07BC8DB1CEC972100FBA8EF /* dubsmashinternetgekkies.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F07BC8DA1CEC972100FBA8EF /* dubsmashinternetgekkies.jpg */; };
 		F091E7421CED277F007DB9F6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F091E7411CED277F007DB9F6 /* GoogleService-Info.plist */; };
 		F09AEA191CE51F360033DD89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09AEA181CE51F360033DD89 /* AppDelegate.swift */; };
@@ -50,7 +50,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AC1F755A37E7D64235AD3200 /* libPods-Internet Gekkies.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Internet Gekkies.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B416FF15EA4E0217A814F86 /* Pods_Internet_Gekkies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Internet_Gekkies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C49D99FA3EE5384A4DD7B2B6 /* Pods-Internet Gekkies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Internet Gekkies.release.xcconfig"; path = "Pods/Target Support Files/Pods-Internet Gekkies/Pods-Internet Gekkies.release.xcconfig"; sourceTree = "<group>"; };
 		EDE77ED5E4A8F67D9FB22234 /* Pods-Internet Gekkies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Internet Gekkies.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Internet Gekkies/Pods-Internet Gekkies.debug.xcconfig"; sourceTree = "<group>"; };
 		F07BC8DA1CEC972100FBA8EF /* dubsmashinternetgekkies.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dubsmashinternetgekkies.jpg; sourceTree = "<group>"; };
@@ -102,7 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02CB640E697A37BE19C812C9 /* libPods-Internet Gekkies.a in Frameworks */,
+				ECAFBF03D37BD8D7708F635E /* Pods_Internet_Gekkies.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,7 +121,7 @@
 		8FC8F38E88EB0D662944E3C5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AC1F755A37E7D64235AD3200 /* libPods-Internet Gekkies.a */,
+				9B416FF15EA4E0217A814F86 /* Pods_Internet_Gekkies.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

@@ -14,7 +14,7 @@ class SoundListViewController: UIViewController, UITableViewDataSource, UITableV
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addButtonOut: UIBarButtonItem!
-    @IBOutlet weak var bannerView: UIView!
+    @IBOutlet weak var bannerView: GADBannerView!
     
     var audioPlayer = AVAudioPlayer()
     var soundPath : String = ""
@@ -52,10 +52,10 @@ class SoundListViewController: UIViewController, UITableViewDataSource, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //print("Google Mobile Ads SDK version: " + GADRequest.sdkVersion())
-        //bannerView.adUnitID = "ca-app-pub-2406264984624429/9731672265"
-        //bannerView.rootViewController = self
-        //bannerView.loadRequest(GADRequest()
+        print("Google Mobile Ads SDK version: " + GADRequest.sdkVersion())
+        bannerView.adUnitID = "ca-app-pub-2406264984624429/9731672265"
+        bannerView.rootViewController = self
+        bannerView.loadRequest(GADRequest())
             
         addButtonOut.enabled = false
         self.tableView.dataSource = self
