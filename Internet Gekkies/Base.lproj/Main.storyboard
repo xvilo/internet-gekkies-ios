@@ -19,16 +19,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Qjl-XV-WtQ">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="545"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xKg-Pb-iZL">
+                                <rect key="frame" x="0.0" y="550" width="600" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="VUs-h1-gm8"/>
+                                    <constraint firstAttribute="height" constant="50" id="XMj-5J-CEU"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="VUs-h1-gm8"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Qjl-XV-WtQ" secondAttribute="bottom" id="45K-sk-FNk"/>
                             <constraint firstItem="Qjl-XV-WtQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Fam-YW-Rtd"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xKg-Pb-iZL" secondAttribute="bottom" id="GvO-zd-ja8"/>
+                            <constraint firstItem="xKg-Pb-iZL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HGA-nD-nmR"/>
                             <constraint firstAttribute="trailing" secondItem="Qjl-XV-WtQ" secondAttribute="trailing" id="JRl-7q-mHd"/>
                             <constraint firstItem="Qjl-XV-WtQ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="LE6-nw-lKZ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Qjl-XV-WtQ" secondAttribute="bottom" constant="55" id="OSu-44-VOg"/>
+                            <constraint firstItem="xKg-Pb-iZL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="nmE-H0-gl4"/>
+                            <constraint firstAttribute="trailing" secondItem="xKg-Pb-iZL" secondAttribute="trailing" id="p7U-tS-tUi"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Internet Gekkies" id="oA6-uz-LzO">
@@ -40,6 +57,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="addButtonOut" destination="VgY-7v-ndO" id="pyk-Wj-rtH"/>
+                        <outlet property="bannerView" destination="xKg-Pb-iZL" id="Vtf-Vr-Vcr"/>
                         <outlet property="tableView" destination="Qjl-XV-WtQ" id="HdS-Dg-aXG"/>
                     </connections>
                 </viewController>
