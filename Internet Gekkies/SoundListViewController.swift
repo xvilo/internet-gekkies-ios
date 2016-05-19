@@ -8,11 +8,9 @@
 
 import UIKit
 import AVFoundation
-import GoogleMobileAds
 
 class SoundListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    @IBOutlet weak var bannerView: GADBannerView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addButtonOut: UIBarButtonItem!
     
@@ -54,11 +52,6 @@ class SoundListViewController: UIViewController, UITableViewDataSource, UITableV
         addButtonOut.enabled = false
         self.tableView.dataSource = self
         self.tableView.delegate = self
-        
-        print("Google Mobile Ads SDK version: \(GADRequest.sdkVersion())")
-        bannerView.adUnitID = "ca-app-pub-2406264984624429/9731672265"
-        bannerView.rootViewController = self
-        bannerView.loadRequest(GADRequest())
         
         sound1.name = "Plausibel"
         sound1.URL = NSURL.fileURLWithPath(NSBundle.mainBundle().pathForResource("plausibel", ofType: "mp3")!)
